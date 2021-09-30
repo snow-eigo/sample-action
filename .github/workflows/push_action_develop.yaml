@@ -10,6 +10,7 @@ jobs:
   push_develop:
     name: push develop
     if: ${{ github.repository_owner == 'gongnyaa' }}
+    runs-on: ubuntu-latest
     env:
       FREEDOM_CREATORS_API_TOKEN_GITHUB: ${{ secrets.API_TOKEN }}
       #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
