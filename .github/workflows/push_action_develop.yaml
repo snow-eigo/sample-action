@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       #FREEDOM_CREATORS_API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
-      REPO_TOKEN_SAMP: ${{ secrets.REPO_TOKEN_SAMP }}
-      #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #REPO_TOKEN_SAMP: ${{ secrets.REPO_TOKEN_SAMP }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       #- uses: actions/checkout@v2
           #git clone https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action-destination.git
       - run: |
-          git clone https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action.git
+          git clone https://estellise-yukihime:$GITHUB_TOKEN@github.com/snow-eigo/sample-action.git
           cd sample-action
           
           git branch
@@ -28,7 +28,7 @@ jobs:
           git config --global user.name 'estellise-yukihime'
           git config --global user.email 'shiranoyukihime@gmail.com'
 
-          git remote add upstream https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action-destination.git
+          git remote add upstream https://estellise-yukihime:$GITHUB_TOKEN@github.com/snow-eigo/sample-action-destination.git
 
           git remote -v
 
