@@ -33,4 +33,5 @@ jobs:
 
           git remote -v
 
-          git branch
+          git checkout -b action/push_develop
+          git push origin action/push_develop
