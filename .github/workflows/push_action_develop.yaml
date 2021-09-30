@@ -12,8 +12,8 @@ jobs:
     #if: ${{ github.repository_owner == 'gongnyaa' }}
     runs-on: ubuntu-latest
     env:
-      FREEDOM_CREATORS_API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
-      #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #FREEDOM_CREATORS_API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -24,7 +24,7 @@ jobs:
 
           echo $FREEDOM_CREATORS_API_TOKEN_GITHUB
 
-          git remote set-url origin https://gongnyaa:$FREEDOM_CREATORS_API_TOKEN_GITHUB@github.com/freedomcreators/sample-destination.git
+          git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/freedomcreators/sample-destination.git
 
           git remote -v
 
