@@ -22,7 +22,9 @@ jobs:
 
           git remote -v
 
-          git remote set-url --push origin https://gongnyaa:$FREEDOM_CREATORS_API_TOKEN_GITHUB@github.com/freedomcreators/sample-destination
+          echo $FREEDOM_CREATORS_API_TOKEN_GITHUB
+
+          git remote set-url origin https://gongnyaa:$FREEDOM_CREATORS_API_TOKEN_GITHUB@github.com/freedomcreators/sample-destination
 
           git remote -v
 
