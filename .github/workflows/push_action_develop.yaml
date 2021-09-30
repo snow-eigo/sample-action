@@ -17,14 +17,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          git config user.name 'gongnyaa'
-          git config user.email 'kaneko.teruaki@gmail.com'
+          git config --global user.name 'gongnyaa'
+          git config --global user.email 'kaneko.teruaki@gmail.com'
 
           git remote -v
 
           echo $FREEDOM_CREATORS_API_TOKEN_GITHUB
 
-          git remote set-url origin https://gongnyaa:$FREEDOM_CREATORS_API_TOKEN_GITHUB@github.com/freedomcreators/sample-destination
+          git remote set-url origin https://gongnyaa:$FREEDOM_CREATORS_API_TOKEN_GITHUB@github.com/freedomcreators/sample-destination.git
 
           git remote -v
 
