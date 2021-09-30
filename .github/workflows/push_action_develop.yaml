@@ -27,5 +27,4 @@ jobs:
 
           git remote set-url origin https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action-destination.git
 
-          git checkout -b action/push_develop
-          git push origin action/push_develop
+          git push origin
