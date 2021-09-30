@@ -19,7 +19,7 @@ jobs:
       #- uses: actions/checkout@v2
       - run: |
           git clone https://estellise-yukihime:$API_TOKEN@github.com/snow-eigo/sample-action.git
-          git clone https://estellise-yukihime:$API_TOKEN@github.com/snow-eigo/sample-sample-action-destination.git
+          git clone https://estellise-yukihime:$API_TOKEN@github.com/snow-eigo/sample-action-destination.git
 
           cd sample-action
 
