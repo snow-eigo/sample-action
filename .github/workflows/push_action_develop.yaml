@@ -24,8 +24,8 @@ jobs:
 
           echo $FREEDOM_CREATORS_API_TOKEN_GITHUB
 
-          git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/freedomcreators/sample-destination.git
+          git remote set-url origin https://estellise-yukihime:$GITHUB_TOKEN@github.com/snow-eigo/sample-action-destination.git
 
           git remote -v
 
-          git push origin
+          git push origin action/push_develop
