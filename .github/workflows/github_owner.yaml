@@ -1,0 +1,14 @@
+name: show github owner account name
+
+on:
+  push:
+    branches:
+      - action/github_owner
+
+jobs:
+  github_owner:
+    name: display github owner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo ${{ github.repository_owner }}
