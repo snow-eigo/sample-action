@@ -18,8 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          git config --global user.name 'a'
-          git config --global user.email 'kaneko.teruaki@gmail.com'
+          git config --global user.name 'estellise-yukihime'
+          git config --global user.email 'shiranoyukihime@gmail.com'
 
           git remote -v
 
