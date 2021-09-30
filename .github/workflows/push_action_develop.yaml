@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       #FREEDOM_CREATORS_API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
+      #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - run: |
