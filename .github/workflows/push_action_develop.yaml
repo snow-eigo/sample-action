@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - develop
+      - action/push_develop
 
-job:
+jobs:
   push_develop:
     name: push develop
     if: ${{ github.repository_owner == 'gongnyaa' }}
