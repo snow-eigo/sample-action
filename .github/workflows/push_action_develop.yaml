@@ -16,8 +16,12 @@ jobs:
       API_TOKEN: ${{ secrets.API_TOKEN }}
       #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      #- uses: actions/checkout@v2
       - run: |
+          git clone https://estellise-yukihime:$API_TOKEN@github.com/snow-eigo/sample-action.git
+
+          cd sample-action
+
           git config --global user.name 'estellise-yukihime'
           git config --global user.email 'shiranoyukihime@gmail.com'
 
