@@ -12,25 +12,19 @@ jobs:
     #if: ${{ github.repository_owner == 'gongnyaa' }}
     runs-on: ubuntu-latest
     env:
-      #FREEDOM_CREATORS_API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
-      #REPO_TOKEN_SAMP: ${{ secrets.REPO_TOKEN_SAMP }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ORG_REPO_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
     steps:
-      #- uses: actions/checkout@v2
-          #git clone https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action-destination.git
       - run: |
-          git clone https://estellise-yukihime:$GITHUB_TOKEN@github.com/snow-eigo/sample-action.git
-          cd sample-action
+          git clone --depth 1 -b develop https://gongnyaa:$ORG_REPO_TOKEN@github.com/gongnyaa/Eigomonogatari.git
           
+          cd Eigomonogatari
+        
+          git config --global user.name 'gongnyaa'
+          git config --global user.email 'kaneko.teruaki@gmail.com'
+
+          git remote add upstream https://gongnyaa:$ORG_REPO_TOKEN@github.com/freedomcreators/Eigomonogatari.git
+
           git branch
-          git remote -v
 
-          git config --global user.name 'estellise-yukihime'
-          git config --global user.email 'shiranoyukihime@gmail.com'
-
-          git remote add upstream https://estellise-yukihime:$GITHUB_TOKEN@github.com/snow-eigo/sample-action-destination.git
-
-          git remote -v
-
-          git checkout action/push_develop
-          git push upstream action/push_develop
+          git checkout -b develop
+          git push upstream develop
