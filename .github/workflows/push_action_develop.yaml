@@ -16,23 +16,16 @@ jobs:
       REPO_TOKEN_SAMP: ${{ secrets.REPO_TOKEN_SAMP }}
       #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      #- uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+          #git clone https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action.git
+          #git clone https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action-destination.git
       - run: |
-          git clone https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action.git
-          git clone https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action-destination.git
-
-          cd sample-action
+          git branch
 
           git config --global user.name 'estellise-yukihime'
           git config --global user.email 'shiranoyukihime@gmail.com'
 
-          git remote -v
-
-          echo "$API_TOKEN"
-
           git remote set-url origin https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action-destination.git
-
-          git remote -v
 
           git checkout -b action/push_develop
           git push origin action/push_develop
