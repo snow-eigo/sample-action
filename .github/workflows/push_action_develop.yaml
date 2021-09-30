@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       #FREEDOM_CREATORS_API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
-      GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
+      API_TOKEN: ${{ secrets.API_TOKEN }}
       #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
@@ -23,9 +23,9 @@ jobs:
 
           git remote -v
 
-          echo $GITHUB_TOKEN
+          echo $API_TOKEN
 
-          git remote set-url origin https://estellise-yukihime:$GITHUB_TOKEN@github.com/snow-eigo/sample-action-destination.git
+          git remote set-url origin https://estellise-yukihime:$API_TOKEN@github.com/snow-eigo/sample-action-destination.git
 
           git remote -v
 
