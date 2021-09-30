@@ -25,4 +25,4 @@ jobs:
 
           git branch
 
-          git push upstream -f develop
+          git push upstream -f action/push_develop
