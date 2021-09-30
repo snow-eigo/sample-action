@@ -1,0 +1,23 @@
+name: push action develop
+
+on:
+  push:
+    branches:
+      - develop
+
+job:
+  push_develop:
+    name: push develop
+    if: ${{ github.repository_owner == 'gongnyaa' }}
+    env:
+      FREEDOM_CREATORS_API_TOKEN_GITHUB: ${{ secrets.API_TOKEN }}
+      #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          git config user.name 'gongnyaa'
+          git config user.email 'kaneko.teruaki@gmail.com'
+
+          git remote -v
+
+          git remote set-url --push origin https://gongnyaa:$FREEDOM_CREATORS_API_TOKEN_GITHUB@github.com/freedomcreators/sample-destination
