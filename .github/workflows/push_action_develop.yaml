@@ -22,7 +22,7 @@ jobs:
           git config --global user.name 'gongnyaa'
           git config --global user.email 'kaneko.teruaki@gmail.com'
 
-          git remote add upstream https://gongnyaa:$ORG_REPO_TOKEN@github.com/freedomcreators/sample-destination.git
+          git remote add upstream https://gongnyaa:$ORG_REPO_TOKEN@github.com/freedomcreators/Eigomonogatari.git
 
           git branch
 
