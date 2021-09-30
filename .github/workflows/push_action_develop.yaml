@@ -27,7 +27,7 @@ jobs:
           git config --global user.name 'estellise-yukihime'
           git config --global user.email 'shiranoyukihime@gmail.com'
 
-          git remote add upstream https://estellise-yukihime:$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action-destination.git
+          git remote add upstream https://$REPO_TOKEN_SAMP@github.com/snow-eigo/sample-action-destination.git
 
           git remote -v
 
